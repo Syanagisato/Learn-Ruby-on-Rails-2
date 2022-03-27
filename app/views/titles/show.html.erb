@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @title %>
+
+<div>
+  <%= link_to "このタイトルを編集する", edit_title_path(@title) %> |
+  <%= link_to "タイトル一覧に戻る", titles_path %>
+
+  <%= button_to "このタイトルを削除", @title, method: :delete %>
+</div>

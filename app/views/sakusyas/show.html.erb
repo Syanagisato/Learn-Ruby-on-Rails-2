@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sakusya %>
+
+<div>
+  <%= link_to "Edit this sakusya", edit_sakusya_path(@sakusya) %> |
+  <%= link_to "Back to sakusyas", sakusyas_path %>
+
+  <%= button_to "Destroy this sakusya", @sakusya, method: :delete %>
+</div>

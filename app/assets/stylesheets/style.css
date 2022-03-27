@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body {
+    text-align: center;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 1rem;
+    text-align: right;
+    margin: 0;
+    background-color: ivory;
+}
+
+a {
+    text-decoration: none;
+}
+
+header span {
+    text-decoration: none;
+    width: 3rem;
+    margin: auto;
+}
+
+#top {
+    padding: 10rem;
+    background-image: url('topback.png');
+}
+
+#mains {
+    border: solid 1px orangered;
+    padding: 1rem;
+    width: 60%;
+    margin: auto;
+}
+
+.newlink {
+    margin-top: 2rem;
+}
+
+.con {
+    width: 50%;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1.5rem;
+}

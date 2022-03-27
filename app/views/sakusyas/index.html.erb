@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>作者の登録</h1>
+
+<div id="sakusyas">
+  <% @sakusyas.each do |sakusya| %>
+    <p>
+      <div class="con"><%= render sakusya %><%= link_to "詳細を見る", sakusya %></div>
+    </p>
+  <% end %>
+</div>
+
+<p class="newlink"><%= link_to "新規登録", new_sakusya_path %></p>

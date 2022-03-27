@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>出版社の登録</h1>
+
+<div id="publishers">
+  <% @publishers.each do |publisher| %>
+    <p>
+      <div class="con"><%= render publisher %><%= link_to "詳しく見る", publisher %></div>
+    </p>
+  <% end %>
+</div>
+
+<p class="newlink"><%= link_to "新規登録", new_publisher_path %></p>

@@ -1,0 +1,39 @@
+<div id="<%= dom_id main %>">
+  <p>
+    <strong>タイトル:</strong>
+    <% if main.title.present? %>
+      <%= @main.title.name %>
+    <% else %>
+      タイトルが空です
+    <% end %>
+  </p>
+
+  <p>
+    <strong>巻:</strong>
+    <%= main.number %>巻
+  </p>
+
+  <p>
+    <strong>作者:</strong>
+    <% if @main.sakusya.present? %>
+      <%= @main.sakusya.name %>
+    <% else %>
+      作者名が空です
+    <% end %>
+  </p>
+
+  <p>
+    <strong>購入日:</strong>
+    <%= main.date %>
+  </p>
+
+  <p>
+    <strong>出版社:</strong>
+    <% if @main.publisher.present? %>
+      <%= @main.publisher.name %>
+    <% else %>
+      出版社名が空です
+    <% end %>
+  </p>
+
+</div>

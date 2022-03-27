@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>タイトルの登録</h1>
+
+<div id="titles">
+  <% @titles.each do |title| %>
+    <div class="con"><%= render title %><%= link_to "詳細を見る", title %></div>
+  <% end %>
+</div>
+
+<p class="newlink"><%= link_to "新規登録", new_title_path %></p>

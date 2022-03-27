@@ -1,0 +1,42 @@
+<%= form_with(model: main) do |form| %>
+  <% if main.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(main.errors.count, "error") %> prohibited this main from being saved:</h2>
+
+      <ul>
+        <% main.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title_id, style: "display: block" %>
+    <%= form.select :title_id, Title.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :number, style: "display: block" %>
+    <%= form.number_field :number %>
+  </div>
+
+  <div>
+    <%= form.label :sakusya_id, style: "display: block" %>
+    <%= form.select :sakusya_id, Sakusya.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :publisher_id, style: "display: block" %>
+    <%= form.select :publisher_id, Publisher.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

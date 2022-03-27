@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I have a Comic!!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <header>
+      <% if user_signed_in? %>
+        <span>現在のアカウント：<%= current_user.email %></span>
+        <span>|</span>
+        <span><%= link_to 'TOP', top_index_path %></span>
+        <span>|</span>
+        <span><%= link_to 'マンガリスト', mains_path %></span>
+        <span>|</span>
+        <span><%= link_to 'タイトルリスト', titles_path %></span>
+        <span>|</span>
+        <span><%= link_to '作者リスト', sakusyas_path %></span>
+        <span>|</span>
+        <span><%= link_to '出版社リスト', publishers_path %></span>
+        <span>|</span>
+        <span><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+        <span>|</span>
+        <span><%= link_to 'アカウント情報変更', edit_user_registration_path %></span>
+      <% else %>
+        <span><%= link_to 'TOP', top_index_path %></span>
+        <span>|</span>
+        <span><%= link_to 'ログイン', new_user_session_path %></span>
+        <span>|</span>
+        <span><%= link_to 'アカウント登録', new_user_registration_path %></span>
+      <% end %>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>

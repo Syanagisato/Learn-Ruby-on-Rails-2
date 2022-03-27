@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>今持っているマンガはこちら</h1>
+
+<div id="mains">
+  <% @mains.each do |main| %>
+    <p>
+      <% if main.title.present? %>
+        <%= main.title.name %>
+      <% else %>
+        タイトルが空です
+      <% end %>
+      <% if main.sakusya.present? %>
+        <%= main.sakusya.name %>
+      <% else %>
+        作者名が空です
+      <% end %>
+      <%= main.number %>巻
+      <%= link_to "詳細を見る", main %>
+    </p>
+  <% end %>
+</div>
+
+<div id="title_search">
+  <%= form_tag('/mains', method:'get') do %>
+    <%= label_tag(:title_key, 'タイトルを検索:') %>
+    <%= text_field_tag(:title_key) %>
+    <%= submit_tag('Search') %>
+    <%= link_to '全表示', mains_path %>
+  <% end %>
+</div>
+
+<div id="sakusya_search">
+  <%= form_tag('/mains', method:'get') do %>
+    <%= label_tag(:sakusya_key, '作者を検索:') %>
+    <%= text_field_tag(:sakusya_key) %>
+    <%= submit_tag('Search') %>
+    <%= link_to '全表示', mains_path %>
+  <% end %>
+</div>
+
+<p class="newlink"><%= link_to "新規登録", new_main_path %></p>
