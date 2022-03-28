@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body {
+    background-color: moccasin;
     text-align: center;
     line-height: 1.6;
     padding: 0;
@@ -29,8 +30,33 @@ header span {
     background-image: url('topback.png');
 }
 
+#top_ul li {
+    list-style-type: none;
+}
+
+#top_ul p {
+    margin-bottom: 3rem;
+}
+
+#top_p {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 0;
+    line-height: 2;
+}
+
+article {
+    background-color: ivory;
+    border: 5px dotted orange;
+    width: 50%;
+    margin:auto;
+    margin-bottom: 5rem;
+    padding: 2rem 1rem 3rem 1rem;
+}
+
 #mains {
-    border: solid 1px orangered;
+    background-color: white;
+    border: solid 1px black;
     padding: 1rem;
     width: 60%;
     margin: auto;
@@ -41,9 +67,14 @@ header span {
 }
 
 .con {
+    background-color: white;
     width: 50%;
     border: 1px solid black;
     padding: 1rem;
     margin: auto;
     margin-top: 1.5rem;
+}
+
+#num input[type=number]{
+    width: 5rem;
 }

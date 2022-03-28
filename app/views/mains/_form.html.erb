@@ -12,31 +12,31 @@
   <% end %>
 
   <div>
-    <%= form.label :title_id, style: "display: block" %>
+    <%= form.label :title_id, "タイトル", style: "display: block" %>
     <%= form.select :title_id, Title.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
   </div>
 
-  <div>
-    <%= form.label :number, style: "display: block" %>
+  <div id="num">
+    <%= form.label :number, "巻", style: "display: block" %>
     <%= form.number_field :number %>
   </div>
 
   <div>
-    <%= form.label :sakusya_id, style: "display: block" %>
+    <%= form.label :sakusya_id, "作者名", style: "display: block" %>
     <%= form.select :sakusya_id, Sakusya.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
   </div>
 
   <div>
-    <%= form.label :date, style: "display: block" %>
+    <%= form.label :date, "購入日", style: "display: block" %>
     <%= form.date_field :date %>
   </div>
 
   <div>
-    <%= form.label :publisher_id, style: "display: block" %>
+    <%= form.label :publisher_id, "出版社名", style: "display: block" %>
     <%= form.select :publisher_id, Publisher.where(user_id: current_user.id).map{|o| [o.name, o.id]} %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "決定" %>
   </div>
 <% end %>

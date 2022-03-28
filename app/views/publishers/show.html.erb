@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h2>詳細</h2>
 
-<%= render @publisher %>
+<div class="con">
+  <%= render @publisher %>
+</div>
 
 <div>
-  <%= link_to "Edit this publisher", edit_publisher_path(@publisher) %> |
-  <%= link_to "Back to publishers", publishers_path %>
+  <%= link_to "この出版社名を編集する", edit_publisher_path(@publisher) %> |
+  <%= link_to "出版社リストに戻る", publishers_path %>
 
-  <%= button_to "Destroy this publisher", @publisher, method: :delete %>
+  <%= button_to "この出版社名を削除", @publisher, method: :delete %>
 </div>

@@ -1,12 +1,12 @@
 <h2>詳細</h2>
 
-<p style="color: green"><%= notice %></p>
-
+<div class="con">
 <%= render @main %>
+</div>
 
 <div>
-  <%= link_to "この情報を編集", edit_main_path(@main) %> |
-  <%= link_to "一覧に戻る", mains_path %>
+  <%= link_to "このマンガを編集", edit_main_path(@main) %> |
+  <%= link_to "マンガリストに戻る", mains_path %>
 
   <%= button_to "この情報を削除", @main, method: :delete %>
 </div>

@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<h2>詳細</h2>
 
-<%= render @sakusya %>
+<div class="con">
+  <%= render @sakusya %>
+</div>
 
 <div>
-  <%= link_to "Edit this sakusya", edit_sakusya_path(@sakusya) %> |
-  <%= link_to "Back to sakusyas", sakusyas_path %>
+  <%= link_to "この作者名を編集する", edit_sakusya_path(@sakusya) %> |
+  <%= link_to "作者リストに戻る", sakusyas_path %>
 
-  <%= button_to "Destroy this sakusya", @sakusya, method: :delete %>
+  <%= button_to "この作者名を削除", @sakusya, method: :delete %>
 </div>
